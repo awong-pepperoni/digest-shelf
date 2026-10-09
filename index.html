@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Digest Shelf</title>
+<style>
+/* Layout: one reading column, two sections (AI, Markets), one row per digest. Matches the digest sites' warm-paper tokens. */
+:root {
+  --bg: #faf9f6;
+  --surface: #ffffff;
+  --rule: #e4e1d9;
+  --text: #1c1b18;
+  --text-soft: #4a4843;
+  --text-faint: #66635c;
+  --accent: #8c3f2c;
+  --accent-soft: #f4e9e4;
+  --serif: ui-serif, "Iowan Old Style", Charter, Palatino, Georgia, serif;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace;
+  color-scheme: light;
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #12110f; --surface: #1c1a17; --rule: #2c2925;
+    --text: #ede9e2; --text-soft: #b6b1a6; --text-faint: #948e83;
+    --accent: #e8a48c; --accent-soft: #2e241f;
+    color-scheme: dark;
+  }
+}
+
+body { margin: 0; background: var(--bg); color: var(--text); font: 14px var(--sans); }
+.wrap { max-width: 44rem; margin: 0 auto; padding-inline: 20px; padding-block: 48px 64px; display: grid; gap: 40px; }
+
+header { display: grid; gap: 8px; }
+h1 { font-family: var(--serif); font-size: 2rem; font-weight: 600; margin: 0; letter-spacing: -0.01em; text-wrap: balance; }
+.lede { font-family: var(--serif); font-size: 1.0625rem; color: var(--text-soft); margin: 0; line-height: 1.55; max-width: 60ch; }
+
+section { display: grid; gap: 4px; }
+h2 { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-faint); font-weight: 600; margin: 0 0 8px; padding-bottom: 8px; border-bottom: 1px solid var(--rule); display: flex; justify-content: space-between; }
+h2 span { font-variant-numeric: tabular-nums; }
+
+ul { list-style: none; margin: 0; padding: 0; display: grid; }
+li + li { border-top: 1px solid var(--rule); }
+a.row { display: grid; grid-template-columns: 1fr auto; gap: 4px 16px; align-items: baseline; padding: 14px 10px; margin-inline: -10px; border-radius: 6px; color: inherit; text-decoration: none; transition: background 140ms; }
+a.row:hover { background: var(--accent-soft); }
+a.row:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.name { font-family: var(--serif); font-size: 1.1875rem; font-weight: 600; }
+a.row:hover .name { color: var(--accent); }
+.go { font-size: 0.8125rem; color: var(--accent); white-space: nowrap; }
+.tag { grid-column: 1 / -1; font-size: 0.9375rem; color: var(--text-soft); line-height: 1.45; }
+.src { grid-column: 1 / -1; font-family: var(--mono); font-size: 0.75rem; color: var(--text-faint); overflow-wrap: anywhere; }
+
+footer { font-size: 0.8125rem; color: var(--text-faint); line-height: 1.5; }
+@media (prefers-reduced-motion: reduce) { a.row { transition: none; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Digest Shelf</h1>
+    <p class="lede">Every digest site in one place. Each one is a run-by-run summary, with the newest run open at the top.</p>
+  </header>
+
+  <section aria-labelledby="ai">
+    <h2 id="ai">AI <span>2 digests</span></h2>
+    <ul>
+      <li><a class="row" href="https://awong-pepperoni.github.io/ai-digest/">
+        <span class="name">AI Digest</span><span class="go">Open ↗</span>
+        <span class="tag">What the AI subreddits said, week by week</span>
+        <span class="src">awong-pepperoni.github.io/ai-digest</span></a></li>
+      <li><a class="row" href="https://awong-pepperoni.github.io/ai-web-digest/">
+        <span class="name">AI Web Digest</span><span class="go">Open ↗</span>
+        <span class="tag">What the labs, curators and tech press said about AI: lab announcements, expert curators, Hacker News</span>
+        <span class="src">awong-pepperoni.github.io/ai-web-digest</span></a></li>
+    </ul>
+  </section>
+
+  <section aria-labelledby="mk">
+    <h2 id="mk">Markets <span>5 digests</span></h2>
+    <ul>
+      <li><a class="row" href="https://awong-pepperoni.github.io/stocks-digest/">
+        <span class="name">Stocks &amp; Investing Digest</span><span class="go">Open ↗</span>
+        <span class="tag">What r/stocks and r/investing said, run by run</span>
+        <span class="src">awong-pepperoni.github.io/stocks-digest</span></a></li>
+      <li><a class="row" href="https://awong-pepperoni.github.io/valueinvesting-digest/">
+        <span class="name">Value Investing Digest</span><span class="go">Open ↗</span>
+        <span class="tag">What r/ValueInvesting said, run by run</span>
+        <span class="src">awong-pepperoni.github.io/valueinvesting-digest</span></a></li>
+      <li><a class="row" href="https://awong-pepperoni.github.io/goog-stock-digest/">
+        <span class="name">GOOG Stock Digest</span><span class="go">Open ↗</span>
+        <span class="tag">What r/GOOG_Stock said, run by run</span>
+        <span class="src">awong-pepperoni.github.io/goog-stock-digest</span></a></li>
+      <li><a class="row" href="https://awong-pepperoni.github.io/sofistock-digest/">
+        <span class="name">SoFi Stock Digest</span><span class="go">Open ↗</span>
+        <span class="tag">What r/sofistock said, run by run</span>
+        <span class="src">awong-pepperoni.github.io/sofistock-digest</span></a></li>
+      <li><a class="row" href="https://awong-pepperoni.github.io/superstonk-digest/">
+        <span class="name">Superstonk Digest</span><span class="go">Open ↗</span>
+        <span class="tag">What r/Superstonk said, run by run</span>
+        <span class="src">awong-pepperoni.github.io/superstonk-digest</span></a></li>
+    </ul>
+  </section>
+
+  <footer>Market digests summarise Reddit discussion and are not financial advice.</footer>
+</div>
+</body>
+</html>
