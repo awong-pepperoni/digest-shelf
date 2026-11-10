@@ -4,6 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Digest Shelf</title>
+<link rel="alternate" type="application/atom+xml" title="AI Digest" href="https://awong-pepperoni.github.io/ai-digest/feed.xml">
+<link rel="alternate" type="application/atom+xml" title="AI Web Digest" href="https://awong-pepperoni.github.io/ai-web-digest/feed.xml">
+<link rel="alternate" type="application/atom+xml" title="Stocks &amp; Investing Digest" href="https://awong-pepperoni.github.io/stocks-digest/feed.xml">
+<link rel="alternate" type="application/atom+xml" title="Value Investing Digest" href="https://awong-pepperoni.github.io/valueinvesting-digest/feed.xml">
+<link rel="alternate" type="application/atom+xml" title="GOOG Stock Digest" href="https://awong-pepperoni.github.io/goog-stock-digest/feed.xml">
+<link rel="alternate" type="application/atom+xml" title="NVDA Stock Digest" href="https://awong-pepperoni.github.io/nvda-stock-digest/feed.xml">
+<link rel="alternate" type="application/atom+xml" title="SoFi Stock Digest" href="https://awong-pepperoni.github.io/sofistock-digest/feed.xml">
+<link rel="alternate" type="application/atom+xml" title="Superstonk Digest" href="https://awong-pepperoni.github.io/superstonk-digest/feed.xml">
 <style>
 /* Layout: one reading column, two sections (AI, Markets), one row per digest. Matches the digest sites' warm-paper tokens. */
 :root {
@@ -53,6 +61,9 @@ a.row:hover .name { color: var(--accent); }
 .go { font-size: 0.8125rem; color: var(--accent); white-space: nowrap; }
 .tag { grid-column: 1 / -1; font-size: 0.9375rem; color: var(--text-soft); line-height: 1.45; }
 .src { grid-column: 1 / -1; font-family: var(--mono); font-size: 0.75rem; color: var(--text-faint); overflow-wrap: anywhere; }
+
+.note { font-size: 0.9375rem; color: var(--text-soft); line-height: 1.5; margin: 0; }
+.note a { color: var(--accent); }
 
 footer { font-size: 0.8125rem; color: var(--text-faint); line-height: 1.5; }
 @media (prefers-reduced-motion: reduce) { a.row { transition: none; } }
@@ -107,6 +118,11 @@ footer { font-size: 0.8125rem; color: var(--text-faint); line-height: 1.5; }
         <span class="tag">What r/Superstonk said, run by run</span>
         <span class="src">awong-pepperoni.github.io/superstonk-digest</span></a></li>
     </ul>
+  </section>
+
+  <section aria-labelledby="rss">
+    <h2 id="rss">Follow in a feed reader</h2>
+    <p class="note">Every digest has a feed. Paste a site's address into your reader, or import <a href="feeds.opml" download>feeds.opml</a> to follow all eight at once.</p>
   </section>
 
   <footer>Market digests summarise Reddit discussion and are not financial advice.</footer>

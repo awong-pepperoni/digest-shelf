@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<opml version="2.0">
+  <head><title>Digest Shelf</title></head>
+  <body>
+    <outline type="rss" text="AI Digest" title="AI Digest" xmlUrl="https://awong-pepperoni.github.io/ai-digest/feed.xml" htmlUrl="https://awong-pepperoni.github.io/ai-digest/"/>
+    <outline type="rss" text="AI Web Digest" title="AI Web Digest" xmlUrl="https://awong-pepperoni.github.io/ai-web-digest/feed.xml" htmlUrl="https://awong-pepperoni.github.io/ai-web-digest/"/>
+    <outline type="rss" text="Stocks &amp; Investing Digest" title="Stocks &amp; Investing Digest" xmlUrl="https://awong-pepperoni.github.io/stocks-digest/feed.xml" htmlUrl="https://awong-pepperoni.github.io/stocks-digest/"/>
+    <outline type="rss" text="Value Investing Digest" title="Value Investing Digest" xmlUrl="https://awong-pepperoni.github.io/valueinvesting-digest/feed.xml" htmlUrl="https://awong-pepperoni.github.io/valueinvesting-digest/"/>
+    <outline type="rss" text="GOOG Stock Digest" title="GOOG Stock Digest" xmlUrl="https://awong-pepperoni.github.io/goog-stock-digest/feed.xml" htmlUrl="https://awong-pepperoni.github.io/goog-stock-digest/"/>
+    <outline type="rss" text="NVDA Stock Digest" title="NVDA Stock Digest" xmlUrl="https://awong-pepperoni.github.io/nvda-stock-digest/feed.xml" htmlUrl="https://awong-pepperoni.github.io/nvda-stock-digest/"/>
+    <outline type="rss" text="SoFi Stock Digest" title="SoFi Stock Digest" xmlUrl="https://awong-pepperoni.github.io/sofistock-digest/feed.xml" htmlUrl="https://awong-pepperoni.github.io/sofistock-digest/"/>
+    <outline type="rss" text="Superstonk Digest" title="Superstonk Digest" xmlUrl="https://awong-pepperoni.github.io/superstonk-digest/feed.xml" htmlUrl="https://awong-pepperoni.github.io/superstonk-digest/"/>
+  </body>
+</opml>
